@@ -1,0 +1,14 @@
+body, h1 {
+    font-size: 50px;
+    color:white;
+    text-align: center;
+    background-image: url(../images/herobg.jpg);
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+#buttons, .heroName { 
+    font-size: 25px;
+    margin: 10px;
+}
