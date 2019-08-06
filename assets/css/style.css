@@ -4,12 +4,16 @@ body, h1 {
     text-align: center;
     background-image: url(../images/herobg.jpg);
     background-repeat: no-repeat; 
-    background-size: cover;
 }
 
 
- .heroName, form { 
+ .heroName, form, p { 
     font-size: 25px;
     margin:10px; 
     text-align: center;
+}
+
+.gifs {
+    font-size: 25px;
+    display: inline;
 }
