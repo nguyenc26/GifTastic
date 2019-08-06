@@ -46,9 +46,10 @@ function displayGifs() {
 }
 //adding an item event 
 $("#addhero").on("click", function(){
+    event.preventDefault();
 	var newHero = $("#superheroes-input").val().trim();
 	superheroes.push(newHero);
-	makeButtons();
+	generatebuttons();
 })
 
 //displays gif with api function

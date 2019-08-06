@@ -7,7 +7,7 @@ body, h1 {
 }
 
 
- .heroName, form, p { 
+ .heroName, form { 
     font-size: 25px;
     margin:10px; 
     text-align: center;
@@ -15,5 +15,9 @@ body, h1 {
 
 .gifs {
     font-size: 25px;
+    display: inline;
+}
+
+#gifarea{
     display: inline;
 }
