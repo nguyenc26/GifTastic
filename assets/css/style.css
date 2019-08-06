@@ -8,7 +8,8 @@ body, h1 {
 }
 
 
-#buttons, .heroName { 
+ .heroName, form { 
     font-size: 25px;
-    margin: 10px;
+    margin:10px; 
+    text-align: center;
 }
