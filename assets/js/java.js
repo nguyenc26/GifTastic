@@ -1,3 +1,4 @@
+$( document ).ready(function() {
 
 //array of things to scan through 
 var superheroes = ["Batman", "Superman", "Spider-man", "Green Lantern", "Hulk", "Wonder Woman", "Black Widow", "The Flash", "Wolverine", "Thor", "Dead pool", "Doctor Strange"]
@@ -30,7 +31,7 @@ function displayGifs() {
             var rating = results[i].rating;
             var p = $("<p>").text("Rating: " + rating);
             var heroImage = $("<img>");
-            heroImage.attr("src", results[i].images.fixed_height.url);
+            heroImage.attr("src", results[i].images.fixed_height_still.url);
             heroImage.attr('data-still', results[i].images.fixed_height_still.url);
 			heroImage.attr('data-state', 'still');
 			heroImage.attr('data-animate', results[i].images.fixed_height.url);
@@ -55,15 +56,20 @@ $("#addhero").on("click", function(){
 //displays gif with api function
 
 //click event listener for animating gifs
-$(".gifs").on("click", function () {
+$("#gifarea").on("click", "img", function () {
+
     var state = $(this).attr("data-state");
+    console.log($(this));
 
     if (state === "still") {
         $(this).attr("src", $(this).attr("data-animate"));
         $(this).attr("data-state", "animate");
+        console.log("still")
     } else {
         $(this).attr("src", $(this).attr("data-still"));
         $(this).attr("data-state", "still");
+        console.log("animated")
+
     }
 });
 
@@ -71,4 +77,5 @@ $(".gifs").on("click", function () {
 
 $(document).on("click", ".heroName", displayGifs);
 
-generatebuttons()
+generatebuttons();
+});
