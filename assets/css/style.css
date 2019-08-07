@@ -1,9 +1,7 @@
 body, h1 {
     font-size: 50px;
-    color:white;
+    color:black;
     text-align: center;
-    background-image: url(../images/herobg.jpg);
-    background-repeat: no-repeat; 
 }
 
 
@@ -13,11 +11,9 @@ body, h1 {
     text-align: center;
 }
 
-.gifs {
+.small {
     font-size: 25px;
-    display: inline;
-}
-
-#gifarea{
-    display: inline;
+    size: 200px; 
+    display: inline-grid;
+    margin: 10px; 
 }

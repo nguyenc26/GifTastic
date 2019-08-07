@@ -27,18 +27,23 @@ function displayGifs() {
         var results = response.data;
 
         for ( var i = 0; i < results.length; i++){
-            var gifDiv = $("<div class=gifs>")
+            var gifDiv = $("<div class=big>")
+            var smalldiv = $("<div class=small>")
+
             var rating = results[i].rating;
             var p = $("<p>").text("Rating: " + rating);
+            
             var heroImage = $("<img>");
             heroImage.attr("src", results[i].images.fixed_height_still.url);
             heroImage.attr('data-still', results[i].images.fixed_height_still.url);
 			heroImage.attr('data-state', 'still');
 			heroImage.attr('data-animate', results[i].images.fixed_height.url);
             
-            gifDiv.append(p);
-            gifDiv.append(heroImage);
-            $("#gifarea").prepend(gifDiv);
+            smalldiv.append(p);
+            smalldiv.append(heroImage);
+            // gifDiv.append(smalldiv);
+        
+            $("#gifarea").prepend(smalldiv);
             
             
         }
